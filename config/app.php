@@ -1,5 +1,6 @@
 <?php
-require __DIR__ . '/helpers.php';
+
+require dirname(__DIR__ ). '/bootstrap/helper.php';
 return [
 
     /*
