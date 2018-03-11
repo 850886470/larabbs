@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/','PagesController@root')->name('root');
+Route::get('/', 'TopicsController@index')->name('root');
 
 //Auth::routes();
 //为了更加直观，我们将在 web.php 中使用以上替换 Auth::routes();。
