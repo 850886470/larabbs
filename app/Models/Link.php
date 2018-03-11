@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Cache;
 
-class Link extends Model
+class Link extends EloquentModel
 {
     protected $fillable = ['title', 'link'];
 
