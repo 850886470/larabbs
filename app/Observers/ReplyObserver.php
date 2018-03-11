@@ -16,7 +16,7 @@ class ReplyObserver
 
     public function updating(Reply $reply)
     {
-        //
+
     }
 
     public function created(Reply $reply)
@@ -26,6 +26,11 @@ class ReplyObserver
 
         // 通知作者话题被回复了
         $topic->user->notify(new TopicReplied($reply));
+    }
+
+    public function deleted(Reply $reply)
+    {
+        $reply->topic->decrement('reply_count', 1);
     }
 
 }
