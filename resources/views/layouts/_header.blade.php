@@ -57,11 +57,14 @@
 
                         <ul class="dropdown-menu" role="menu">
 
-                            <li>
-                                <a href="{{ route('topics.create') }}">
-                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                </a>
-                            </li>
+                            @can('manage_contents')
+                                <li>
+                                    <a href="{{ url(config('administrator.uri')) }}">
+                                        <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>
+                                        管理后台
+                                    </a>
+                                </li>
+                            @endcan
 
                             <li>
                                 <a href="{{ route('users.show', Auth::id()) }}">
